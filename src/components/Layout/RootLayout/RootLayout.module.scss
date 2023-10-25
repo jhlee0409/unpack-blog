@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  height: 200vh;
+  position: relative;
+}
+
+.contentSection {
+  padding: 30px 30px 30px 280px;
+  width: 100%;
+  z-index: 0;
+  background-color: $secondary-color;
+}

@@ -1,0 +1,55 @@
+$width: 30px;
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.iconBox {
+  width: calc($width / 2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  filter: invert(0);
+  transition: all 200ms ease-in-out;
+
+  &.dark {
+    transform: translate(-150%, -50%);
+  }
+  &.light {
+    transform: translate(50%, -50%);
+  }
+}
+
+.switch {
+  display: flex;
+  width: calc($width * 2);
+  height: $width;
+  border-radius: calc($width / 2);
+  background-color: white;
+  position: relative;
+  &:before {
+    transition: all 150ms ease-in-out;
+    position: absolute;
+    content: "";
+    background-color: black;
+    border-radius: 50%;
+    width: calc($width - 10px);
+    height: calc($width - 10px);
+    top: 50%;
+    z-index: 10;
+  }
+
+  &.light {
+    &:before {
+      transform: translate(165%, -50%);
+    }
+  }
+
+  &.dark {
+    &:before {
+      transform: translate(25%, -50%);
+    }
+  }
+}
