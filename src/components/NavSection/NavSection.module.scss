@@ -28,3 +28,39 @@
     width: 100vw;
   }
 }
+
+.linkGroup {
+  background-color: $primary-color;
+  height: 600px;
+}
+
+.bgBox {
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 4px;
+  transform: translateY(-50%);
+  transition: all 100ms ease-in-out;
+  align-items: center;
+  display: flex;
+  & > div {
+    height: 20px;
+    background-color: $point-color;
+    width: 4px;
+  }
+}
+
+.link {
+  position: relative;
+  color: white;
+  width: 100%;
+  display: inline-block;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 40px;
+  &.active {
+    color: $point-color;
+  }
+}
