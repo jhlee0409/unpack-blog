@@ -13,13 +13,20 @@ $width: 30px;
   display: flex;
   filter: invert(0);
   transition: all 200ms ease-in-out;
-
   &.dark {
-    transform: translate(-150%, -50%);
-  }
-  &.light {
     transform: translate(50%, -50%);
   }
+  &.light {
+    transform: translate(-150%, -50%);
+  }
+}
+
+.handle {
+  background-color: black;
+  border-radius: 50%;
+  width: calc($width - 10px);
+  height: calc($width - 10px);
+  z-index: 10;
 }
 
 .switch {
@@ -29,27 +36,13 @@ $width: 30px;
   border-radius: calc($width / 2);
   background-color: white;
   position: relative;
-  &:before {
-    transition: all 150ms ease-in-out;
-    position: absolute;
-    content: "";
-    background-color: black;
-    border-radius: 50%;
-    width: calc($width - 10px);
-    height: calc($width - 10px);
-    top: 50%;
-    z-index: 10;
-  }
-
-  &.light {
-    &:before {
-      transform: translate(165%, -50%);
-    }
-  }
+  align-items: center;
+  padding: 0 5px;
 
   &.dark {
-    &:before {
-      transform: translate(25%, -50%);
-    }
+    justify-content: flex-start;
+  }
+  &.light {
+    justify-content: flex-end;
   }
 }
