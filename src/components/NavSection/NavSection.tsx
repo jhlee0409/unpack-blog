@@ -29,7 +29,7 @@ export const NavSection = () => {
         </Link>
         <Link
           className={cx("link", active === 2 ? "active" : "")}
-          href="/"
+          href="/test-mdx-page"
           onClick={() => setActive(2)}
         >
           section1

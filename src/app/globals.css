@@ -14,6 +14,11 @@
   font-style: normal;
 }
 
+html {
+  font-family: "MaplestoryOTFLight", sans-serif;
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -29,12 +34,6 @@ button {
   outline: none;
   border: none;
   background-color: transparent;
-}
-
-p,
-span,
-button {
-  font-family: "MaplestoryOTFLight", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
