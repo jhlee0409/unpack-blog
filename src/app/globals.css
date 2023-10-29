@@ -18,6 +18,9 @@ html {
   font-family: "MaplestoryOTFLight", sans-serif;
   font-size: 16px;
 }
+code {
+  font-family: "MaplestoryOTFLight", sans-serif;
+}
 
 * {
   box-sizing: border-box;

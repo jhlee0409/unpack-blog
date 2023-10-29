@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
+import { PostSummaryBox } from "@/components/postSummaryBox/PostSummaryBox";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -21,17 +22,8 @@ function MdxLayout({ children, ...props }: LayoutProps) {
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.title} />
       </Head>
-      <div>
-        <p>{props.meta.title}</p>
-        <p>{props.meta.date}</p>
-        <p>{props.meta.author}</p>
-        <p>{props.meta.summary}</p>
-        <div>
-          {props.meta.tags.map((i) => (
-            <span key={i}>{i}</span>
-          ))}
-        </div>
-      </div>
+      <PostSummaryBox {...props.meta} />
+
       {children}
     </MDXProvider>
   );
