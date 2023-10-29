@@ -1,6 +1,5 @@
 import { PostListCard } from "@/components/postListCard/PostListCard";
 import { getPosts } from "@/helper/middle";
-import Link from "next/link";
 import React from "react";
 
 export const getAllPost = async () => {
@@ -8,7 +7,7 @@ export const getAllPost = async () => {
   return categories;
 };
 
-const DappPage = async () => {
+export default async function DappPage() {
   const post = await getAllPost();
 
   return (
@@ -19,6 +18,4 @@ const DappPage = async () => {
       ))}
     </div>
   );
-};
-
-export default DappPage;
+}

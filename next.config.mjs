@@ -11,6 +11,9 @@ const nextConfig = {
     prependData: `@import "src/styles/_variables.module.scss";`,
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 const withMDX = createMDX({

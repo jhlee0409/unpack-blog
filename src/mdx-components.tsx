@@ -17,14 +17,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </a>
     ),
-    img: (props) => (
-      <Image
-        sizes="100vw"
-        style={{ width: "100%", height: "auto" }}
-        {...props}
-        alt="asd"
-      />
-    ),
+    // img: (props) => (
+    //   <Image
+    //     sizes="100vw"
+    //     style={{ width: "100%", height: "auto" }}
+    //     {...props}
+    //     alt="asd"
+    //   />
+    // ),
     ...components,
   };
 }
