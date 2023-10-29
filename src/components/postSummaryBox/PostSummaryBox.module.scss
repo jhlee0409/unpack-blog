@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid white;
+  padding: 20px 10px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.summary {
+  font-size: 0.9em;
+}
+
+.tagBox {
+  display: flex;
+  gap: 10px;
+}
